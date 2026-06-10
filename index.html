@@ -24,6 +24,7 @@
         <button id="btnLeft" class="ctrl">◀</button>
         <button id="btnFire" class="ctrl fire">FIRE</button>
         <button id="btnRight" class="ctrl">▶</button>
+        <button id="btnPause" class="ctrl pause">II</button>
       </section>
 
       <section id="overlay" class="show">
@@ -32,6 +33,14 @@
           <p>Destrua a onda inteira para recarregar energia e avançar de fase.</p>
           <p>Desktop: ← → e espaço. Mobile: botões na tela.</p>
           <button id="startBtn">START</button>
+        </div>
+      </section>
+
+      <section id="pauseOverlay" class="hidden" aria-label="Jogo pausado">
+        <div class="panel">
+          <h1>PAUSED</h1>
+          <p>Pressione <strong>P</strong> ou toque em <strong>II</strong> para continuar.</p>
+          <button id="resumeBtn">RESUME</button>
         </div>
       </section>
     </main>
