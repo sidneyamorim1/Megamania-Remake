@@ -25,7 +25,7 @@ html, body {
   background: #000;
 }
 
-#hud, #energyWrap, #mobileControls, #overlay, #pauseOverlay {
+#hud, #energyWrap, #mobileControls, #overlay, #pauseOverlay, #helpBar {
   position: absolute;
   left: 0;
   right: 0;
@@ -41,6 +41,25 @@ html, body {
   font-size: 18px;
   letter-spacing: 1px;
   text-shadow: 0 0 8px rgba(255,255,255,0.25);
+}
+
+#helpBar {
+  top: 42px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  padding: 6px 10px;
+  color: #b6c9ff;
+  font-size: 11px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+#helpBar div {
+  padding: 4px 8px;
+  border: 1px solid rgba(182,201,255,0.35);
+  background: rgba(8,12,22,0.55);
 }
 
 #energyWrap {
@@ -87,7 +106,19 @@ html, body {
   color: #fff;
   font: inherit;
   font-size: 22px;
+  line-height: 1;
   pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctrl span {
+  display: block;
+  margin-top: 4px;
+  font-size: 10px;
+  letter-spacing: 1px;
 }
 
 .ctrl.fire {
@@ -164,5 +195,13 @@ html, body {
 @media (max-width: 900px), (pointer: coarse) {
   #mobileControls { display: flex; }
   #hud { font-size: 14px; }
+  #helpBar {
+    top: 34px;
+    gap: 8px;
+    font-size: 9px;
+  }
+  #helpBar div {
+    padding: 3px 6px;
+  }
   .panel h1 { font-size: 30px; }
 }
