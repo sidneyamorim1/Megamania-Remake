@@ -8,6 +8,9 @@
 
   const gameUrl = './jogo.html';
 
+  frameFallback.style.display = 'block';
+  statusText.textContent = 'Portal pronto';
+
   openFrame.addEventListener('click', () => {
     gameFrame.src = `${gameUrl}?t=${Date.now()}`;
     statusText.textContent = 'Prévia atualizando';
