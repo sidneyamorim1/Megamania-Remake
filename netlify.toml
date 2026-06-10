@@ -1,0 +1,17 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/play"
+  to = "/jogo.html"
+  status = 200
+
+[[redirects]]
+  from = "/game"
+  to = "/jogo.html"
+  status = 200
+
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
