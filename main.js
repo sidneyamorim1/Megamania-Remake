@@ -149,7 +149,11 @@
 
   function togglePause(force) {
     if (!state.running || state.gameOver) return;
-    state.paused = typeof force === 'boolean' ? force : !state.paused;
+    const nextPaused = typeof force === 'boolean' ? force : !state.paused;
+    if (nextPaused !== state.paused) {
+      beep(nextPaused ? 520 : 760, 0.06, 'triangle', 0.035);
+    }
+    state.paused = nextPaused;
     pauseOverlay.classList.toggle('show', state.paused);
   }
 
@@ -498,7 +502,7 @@
   window.addEventListener('keydown', e => {
     keys.add(e.code);
     if (!state.running && e.code === 'Space') startGame();
-    if (e.code === 'KeyP') togglePause();
+    if (e.code === 'KeyP' || e.code === 'Enter') togglePause();
   });
   window.addEventListener('keyup', e => keys.delete(e.code));
   window.addEventListener('resize', resize);
