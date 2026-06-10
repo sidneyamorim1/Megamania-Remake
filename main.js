@@ -12,6 +12,7 @@
   const btnRight = document.getElementById('btnRight');
   const btnFire = document.getElementById('btnFire');
   const btnPause = document.getElementById('btnPause');
+  const btnExit = document.getElementById('btnExit');
 
   const W = 320;
   const H = 480;
@@ -512,6 +513,9 @@
   bindHold(btnRight, 'right');
   bindHold(btnFire, 'fire');
   btnPause.addEventListener('click', () => togglePause());
+  btnExit.addEventListener('click', () => {
+    window.location.href = './index.html';
+  });
 
   resize();
   updateHUD();
