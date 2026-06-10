@@ -1,58 +1,56 @@
 # Megamania Remake
-Jogo de tiro espacial em pixel art inspirado no clássico Megamania. Ondas mistas de inimigos, munições especiais, barra de energia constante e suporte para desktop e mobile com visual arcade e colisão retrô.
 
-# Recursos
+Jogo de tiro espacial em pixel art inspirado no clássico Megamania, com ondas misturadas de inimigos, munições especiais, barra de energia constante e suporte para desktop e mobile.
 
-Pixel art com estética arcade retrô
-Ondas com mistura de sprites diferentes por fase
-Energia decrescente continuamente; recuperar energia ao eliminar uma onda
-Inimigos que aumentam velocidade a cada nível
-Bônus de munição deixados por inimigos
-Várias armas especiais (Laser, Spread, Piercing, Rapid)
-Interface responsiva para desktop e mobile
-Pausa com sobreposição sem perda de estado
+## Recursos
 
-# Como rodar
-Abra index.html em um navegador moderno (Chrome, Firefox, Edge, Safari).
-Para publicar: envie os arquivos ao GitHub Pages apontando o branch main na raiz do repositório.
+- Visual pixel art com clima arcade retrô
+- Ondas com mistura de sprites diferentes por fase
+- Energia que cai continuamente
+- Recuperação de energia ao destruir toda a onda
+- Velocidade dos inimigos aumenta a cada nível
+- Bônus de munição deixados por inimigos
+- Armas especiais: Laser, Spread, Piercing e Rapid
+- Interface responsiva para desktop e mobile
+- Pausa com sobreposição sem perder o estado
 
-# Controles
-Desktop
+## Como rodar
 
-← / → : mover a nave
-Espaço : atirar
-P ou Enter : pausar/retomar
-Mobile
+Abra `index.html` em um navegador moderno.
 
-Controles na tela para mover, atirar e pausar
+Se preferir publicar, envie os arquivos para a Netlify ou GitHub Pages apontando o branch `main` na raiz do repositório.
 
-# Jogabilidade
+## Controles
 
-A barra de energia decai continuamente; ao zerar, perde-se uma vida.
-Destruir todos os inimigos da onda: recupera energia e avança de fase.
-A cada nível a velocidade dos inimigos aumenta.
-Ondas podem misturar diferentes tipos de inimigos na mesma fase.
-Alguns inimigos soltam bônus de munição durante a partida.
+- Desktop
+  - `←` e `→` movem a nave
+  - `Espaço` atira
+  - `P` ou `Enter` pausam e retomam
+- Mobile
+  - botões na tela para mover, atirar e pausar
 
-# Armas Especiais
+## Jogabilidade
 
-Laser: tiro padrão, estável.
-Spread: dispara três projéteis em leque.
-Piercing: projétil atravessa múltiplos inimigos.
-Rapid: reduz o intervalo entre disparos, aumentando a cadência.
+- A barra de energia decai continuamente
+- Se a energia zerar, o jogador perde uma vida
+- Destruir todos os inimigos da onda recupera a energia e avança de fase
+- As ondas misturam sprites diferentes na mesma fase
+- Alguns inimigos soltam bônus de munição durante a partida
 
-# Interface
-Score exibido no topo.
-Barra de energia na parte inferior.
-Dicas de controle visíveis na tela.
-Tela de pausa com sobreposição e retorno preservando o estado do jogo.
+## Armas especiais
 
-# Observações
-Pensado para tela fixa com foco em experiência arcade retrô e colisões precisas. Ajustes de balanceamento e compatibilidade mobile podem ser refinados conforme feedback.
+- `Laser`: tiro padrão, estável
+- `Spread`: dispara três projéteis em leque
+- `Piercing`: projétil atravessa múltiplos inimigos
+- `Rapid`: reduz o intervalo entre disparos
 
+## Interface
 
+- Score no topo
+- Barra de energia na parte inferior
+- Dicas de controle visíveis na tela
+- Tela de pausa com sobreposição e retorno preservando o estado do jogo
 
+## Observação
 
-
-
-
+O jogo foi pensado para funcionar bem em tela fixa, com visual arcade e colisões precisas. Ajustes de balanceamento e compatibilidade mobile podem ser refinados conforme o feedback.

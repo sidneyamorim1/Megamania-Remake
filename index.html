@@ -3,53 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Megamania Remake</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>Portal de Jogos</title>
+    <link rel="stylesheet" href="./portal.css" />
   </head>
   <body>
-    <main id="app">
-      <canvas id="game" aria-label="Jogo de tiro espacial"></canvas>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">Portal interativo</p>
+        <h1>Jogo da Cobrinha</h1>
+        <p class="lead">
+          Uma tela de entrada para o jogador começar rápido, abrir a versão local ou ver uma prévia do jogo.
+        </p>
 
-      <section id="hud">
-        <div id="score">SCORE 000000</div>
-        <div id="level">LEVEL 1</div>
-      </section>
+        <div class="actions">
+          <a id="playLink" class="btn primary" href="./jogo.html">Jogar agora</a>
+          <button id="openLocal" class="btn secondary" type="button">Abrir prévia local</button>
+          <button id="openFrame" class="btn ghost" type="button">Recarregar prévia</button>
+        </div>
 
-      <section id="helpBar" aria-label="Instrucoes de controle">
-        <div><strong>← →</strong> mover</div>
-        <div><strong>Espaço</strong> atirar</div>
-        <div><strong>Enter / P</strong> pausa</div>
-      </section>
-
-      <section id="energyWrap" aria-label="Barra de energia">
-        <div id="energyLabel">ENERGY</div>
-        <div id="energyBar"><div id="energyFill"></div></div>
-      </section>
-
-      <section id="mobileControls" aria-label="Controles mobile">
-        <button id="btnLeft" class="ctrl">◀<span>ESQ</span></button>
-        <button id="btnFire" class="ctrl fire">FIRE<span>ATIRAR</span></button>
-        <button id="btnRight" class="ctrl">▶<span>DIR</span></button>
-        <button id="btnPause" class="ctrl pause">II<span>PAUSE</span></button>
-      </section>
-
-      <section id="overlay" class="show">
-        <div class="panel">
-          <h1>Megamania Remake</h1>
-          <p>Destrua a onda inteira para recarregar energia e avançar de fase.</p>
-          <p>Desktop: ← → e espaço. Mobile: botões na tela.</p>
-          <button id="startBtn">START</button>
+        <div class="meta">
+          <div>
+            <span>Modo</span>
+            <strong>Desktop e mobile</strong>
+          </div>
+          <div>
+            <span>Status</span>
+            <strong id="statusText">Pronto para jogar</strong>
+          </div>
         </div>
       </section>
 
-      <section id="pauseOverlay" class="hidden" aria-label="Jogo pausado">
-        <div class="panel">
-          <h1>PAUSED</h1>
-          <p>Pressione <strong>Enter</strong> ou <strong>P</strong>, ou toque em <strong>II</strong> para continuar.</p>
-          <button id="resumeBtn">RESUME</button>
+      <section class="previewCard">
+        <div class="previewTop">
+          <div class="dot red"></div>
+          <div class="dot yellow"></div>
+          <div class="dot green"></div>
+          <span>Prévia do jogo</span>
+        </div>
+        <div class="previewBody">
+          <iframe
+            id="gameFrame"
+            title="Prévia do Jogo da Cobrinha"
+            src="./jogo.html"
+            loading="lazy"
+            allow="fullscreen"
+          ></iframe>
+          <div class="frameFallback" id="frameFallback">
+            Se a prévia não carregar, use o botão <strong>Jogar agora</strong>.
+          </div>
         </div>
       </section>
     </main>
-    <script src="./main.js"></script>
+    <script src="./portal.js"></script>
   </body>
 </html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Megamania Remake</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="game" aria-label="Jogo de tiro espacial"></canvas>
+
+      <section id="hud">
+        <div id="score">SCORE 000000</div>
+        <div id="level">LEVEL 1</div>
+      </section>
+
+      <section id="helpBar" aria-label="Instrucoes de controle">
+        <div><strong>← →</strong> mover</div>
+        <div><strong>Espaço</strong> atirar</div>
+        <div><strong>Enter / P</strong> pausa</div>
+      </section>
+
+      <section id="energyWrap" aria-label="Barra de energia">
+        <div id="energyLabel">ENERGY</div>
+        <div id="energyBar"><div id="energyFill"></div></div>
+      </section>
+
+      <section id="mobileControls" aria-label="Controles mobile">
+        <button id="btnLeft" class="ctrl">◀<span>ESQ</span></button>
+        <button id="btnFire" class="ctrl fire">FIRE<span>ATIRAR</span></button>
+        <button id="btnRight" class="ctrl">▶<span>DIR</span></button>
+        <button id="btnPause" class="ctrl pause">II<span>PAUSE</span></button>
+      </section>
+
+      <section id="overlay" class="show">
+        <div class="panel">
+          <h1>Megamania Remake</h1>
+          <p>Destrua a onda inteira para recarregar energia e avançar de fase.</p>
+          <p>Desktop: ← → e espaço. Mobile: botões na tela.</p>
+          <button id="startBtn">START</button>
+        </div>
+      </section>
+
+      <section id="pauseOverlay" class="hidden" aria-label="Jogo pausado">
+        <div class="panel">
+          <h1>PAUSED</h1>
+          <p>Pressione <strong>Enter</strong> ou <strong>P</strong>, ou toque em <strong>II</strong> para continuar.</p>
+          <button id="resumeBtn">RESUME</button>
+        </div>
+      </section>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>
